@@ -1,0 +1,49 @@
+
+@media screen and (max-width:679px) {
+    .box{
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 0;
+    }
+
+    .subscribe{
+        max-width: 100%;
+        align-items: baseline;
+    }
+
+    .subscribe h1{
+        padding: 0px 0px 0px 10px;
+    }
+
+    .descri{
+        gap: 10px;
+        width: 100%;
+    }
+
+    .illustration{
+        width: auto;
+        height: auto;
+    }
+
+    .illustration .img1{
+        width: auto;
+        height: auto;
+    }
+
+    .illustration .img1 .image{
+        padding: 0px;
+    }
+
+    .modal-window{
+        background-color: hsl(0, 0%, 100%);
+    }
+
+    .wrapper{
+        margin-top: 50px;
+        height: 100%;
+        justify-content: space-between;
+    }
+}

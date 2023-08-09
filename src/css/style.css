@@ -1,0 +1,209 @@
+@charset "UFT-8";
+body{
+    font-family: 'Roboto', sans-serif;
+    /*
+    min-width: 694px;
+    */
+    max-width: 1440px;
+    background-color: hsl(235, 18%, 26%);
+    color: hsl(235, 18%, 26%);
+    overflow: hidden;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    background-color: hsl(0, 0%, 100%);
+    width: 700px;
+    height: 400px;
+    padding: 18px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.subscribe{
+    max-width: 58%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.subscribe h1{
+    font-size: 35px;
+}
+
+.subscribe p{
+    font-size: 15px;
+    padding: 10px;
+}
+
+.descri{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 10px;
+    gap: 15px;
+}
+
+.descri li{
+    font-size: 15px;
+    text-indent: 35px;
+    background-image: url(../images/icon-list.svg);
+    background-repeat: no-repeat;
+    background-size: 17px;
+}
+
+.subscribe .mail{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    width: 100%;
+}
+
+.mail .form-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mail .form-header .span-required{
+    display: none;
+    font-size: 12px;
+    color: hsl(4, 100%, 67%);
+}
+
+.mail input, button, .btn{
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.mail input{
+    border: 1px solid hsl(231, 7%, 60%);
+    border-color: hsl(231, 7%, 60%);
+    color: hsl(234, 29%, 20%);
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.mail input:focus{
+    border-color: hsl(234, 29%, 20%);
+}
+
+.mail .btn{
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.mail .btn:hover {
+    background-color: hsl(4, 100%, 67%);
+    box-shadow: 0px 10px 25px 0.5px hsl(4, 100%, 67%);
+}
+
+/* formatação da imagem grande */
+
+.illustration{
+    width: 40%;
+    height: 100%;
+    display: flex;
+}
+
+.illustration .img1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:left;
+}
+
+.illustration .img1 .image{
+    padding: 0px 0px 0px 10px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*   Sign-up form end   */
+/* Success message start */
+
+.modal-window{
+    position: fixed;
+    background-color: hsl(235, 18%, 26%);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.modal-window:target{
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper{
+    background-color: hsl(0, 0%, 100%);
+    width: 370px;
+    height: 370px;
+    border-radius: 30px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 30px;
+}
+
+.wrapper h1{
+    padding: 10px 0px 10px 0;
+}
+
+.wrapper p{
+    font-size: 13px;
+    padding: 10px 0px 10px 0;
+}
+
+button{
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: hsl(4, 100%, 67%);
+    box-shadow: 0px 10px 25px 0.5px hsl(4, 100%, 67%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
