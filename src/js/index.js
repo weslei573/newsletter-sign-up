@@ -1,17 +1,18 @@
 const form = document.getElementById("form");
 
 const validateEmail = (email, errorElement) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email.match(emailRegex)) {
-      errorElement.textContent = "Por favor, insira um email válido";
-      errorElement.classList.add("active");
-      return false;
-    }
-    return true;
-  };
+  const emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+/i;
+  if (!email.match(emailRegex)) {
+    errorElement.textContent = "Valid email required";
+    errorElement.classList.add("active");
+    return false;
+  }
+  return true;
+};
 
 function handleSubmit(e) {
   e.preventDefault();
+  console.log(e);
 
   document.querySelectorAll(".error").forEach((error) => {
     error.classList.remove("active");
