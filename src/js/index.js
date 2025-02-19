@@ -1,37 +1,33 @@
-let mail = document.getElementById('mail')
-const form   = document.getElementById('form');
-const campos = document.querySelectorAll('.required');
-const span   = document.querySelectorAll('.span-required');
-const emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+/i;
+const form = document.getElementById("form");
 
-form.addEventListener('submit', (event) => {
-    if(mail.value == ''){
-        emailValidate();
-        console.log('qwe');
-    } else{
-        location.href = '#open-modal';
-        console.log('123');
+const validateEmail = (email, errorElement) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.match(emailRegex)) {
+      errorElement.textContent = "Por favor, insira um email válido";
+      errorElement.classList.add("active");
+      return false;
     }
-    event.preventDefault();
-});
+    return true;
+  };
 
-function setError(index) {
-    campos[index].style.border = '2px solid hsl(4, 100%, 67%)';
-    span[index].style.display = 'block';
+function handleSubmit(e) {
+  e.preventDefault();
+
+  document.querySelectorAll(".error").forEach((error) => {
+    error.classList.remove("active");
+  });
+
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData);
+
+  let isValid = true;
+
+  isValid &= validateEmail(data.email, document.getElementById("email-error"));
+
+  if (isValid) {
+    console.log("Dados válidos:", data);
+    // Enviar formulário ou fazer requisição AJAX
+  }
 }
 
-function removerError(index) {
-    campos[index].style.border = '';
-    span[index].style.display = 'none';
-}
-
-function emailValidate() {
-    if (!emailRegex.test(campos[0].value)) 
-    {
-        setError(0);
-    }
-    else
-    {
-        removerError(0);
-    }
-}
+form.addEventListener("submit", handleSubmit);

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
 
     --Red: hsl(4, 100%, 67%);
@@ -7,201 +9,118 @@
     --White: hsl(0, 0%, 100%);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0 auto;
-    max-width: 80vw;
     background-color: var(--Blue-700);
-    color: var(--Blue-700);
-    overflow: hidden;
+    margin: 0 auto;
+    max-width: 90vw;
+    color: var(--Blue-800);
+    font-family: "Roboto", serif;
 }
 
 .container {
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .box {
     background-color: var(--White);
-    max-width: 928px;
-    padding: 24px;
-    gap: 24px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 928px;
     border-radius: 30px;
+    gap: 24px;
+    padding: 24px;
 }
 
 .subscribe {
-    background-color: aqua;
-    max-width: 58%;
+    /*     background-color: aquamarine; */
+    padding: 40px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 44px;
+    justify-content: center;
 }
-
 
 .subscribe h1 {
     font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
 }
 
 .subscribe p {
     font-size: 1rem;
-    padding: 10px;
+    margin-bottom: 24px;
 }
 
 .descri {
     display: flex;
     flex-direction: column;
-    list-style: none;
-    padding: 10px;
-    gap: 15px;
+    gap: 13px;
+    margin-bottom: 43px;
 }
 
-.descri li {
-    font-size: 15px;
-    text-indent: 35px;
-    background-image: url(../images/icon-list.svg);
-    background-repeat: no-repeat;
-    background-size: 17px;
-}
-
-.subscribe .mail {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 10px;
-    width: 100%;
-}
-
-.mail .form-header {
+.descri-list {
     display: flex;
     align-items: center;
+    gap: 1rem;
+}
+
+.form-header {
+    display: flex;
     justify-content: space-between;
+    margin-bottom: 12px;
 }
 
-.mail .form-header .span-required {
-    display: none;
-    font-size: 1rem;
-    color: hsl(4, 100%, 67%);
+.form-header span {
+    font-size: .9rem;
+    font-weight: 700;
 }
 
-.mail input,
-button,
-.btn {
-    padding: 10px 15px;
+.active {
+    color: var(--Red);
+}
+
+.mail {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+input{
+    padding: 19px 23px;
     border: none;
-    outline: none;
-    border-radius: 5px;
-    font-size: 15px;
-}
-
-.mail input {
     border: 1px solid var(--Grey);
-    border-color: var(--Grey);
-    color: var(--Blue-800);
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 1px;
+    border-radius: 8px;
+    font-size: 1rem;
     cursor: pointer;
 }
 
-.mail input:focus {
-    border-color: var(--Blue-800);
-}
-
-.mail .btn {
+.btn {
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 19px 23px;
     background-color: var(--Blue-800);
     color: var(--White);
-    text-decoration: none;
-    font-size: 1rem;
-    text-align: center;
     cursor: pointer;
 }
 
-.mail .btn:hover {
-    background-color: var(--Red);
-    box-shadow: 0px 10px 25px 0.5px var(--Red);
+.btn:hover {
+    background: linear-gradient(90deg, hsl(346, 100%, 66%) 0%,  hsl(4, 100%, 67%) 100%);
+    box-shadow: hsla(4, 100%, 67%) 0px 13px 27px -5px;
 }
-
-/* formatação da imagem grande */
 
 .illustration {
-    display: flex;
-    background-color: aqua;
-}
-
-.illustration .img1 .image {
-    max-width: 100%;
+    width: 400px;
     height: auto;
-}
-
-/*   Sign-up form end   */
-/* Success message start */
-
-.modal-window {
-    position: fixed;
-    background-color: var(--Blue-700);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s;
-}
-
-.modal-window:target {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.wrapper {
     background-color: var(--White);
-    width: 370px;
-    height: 370px;
-    border-radius: 30px;
-    padding: 35px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    border-radius: 30px;
+    background: url('/src/images/illustration-sign-up-desktop.svg') no-repeat center;
+    background-size: contain;
 }
 
-.wrapper h1 {
-    padding: 10px 0px 10px 0;
-}
-
-.wrapper p {
-    font-size: 13px;
-    padding: 10px 0px 10px 0;
-}
-
-button {
-    background-color: var(--Blue-800);
-    color: var(--White);
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: var(--Red);
-    box-shadow: 0px 10px 25px 0.5px var(--Red);
-}
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}

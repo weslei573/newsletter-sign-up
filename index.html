@@ -11,12 +11,6 @@
 
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.google.com/specimen/Roboto">
-
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="./src/css/reset.css">
   <link rel="stylesheet" href="./src/css/style.css">
@@ -33,35 +27,36 @@
       <section class="subscribe">
         <h1>Stay updated!</h1>
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul class="descri">
-          <li>
+
+        <div class="descri">
+          <div class="descri-list">
+            <img src='./src/images/icon-list.svg' alt="">
             <span>Product discovery and building what matters</span>
-          </li>
-          <li>
+          </div>
+          <div class="descri-list">
+            <img src='./src/images/icon-list.svg' alt="">
             <span>Measuring to ensure updates are a success</span>
-          </li>
-          <li>
+          </div>
+          <div class="descri-list">
+            <img src='./src/images/icon-list.svg' alt="">
             <span>And much more!</span>
-          </li>
-        </ul>
+          </div>
+        </div>
+
+        <div class="form-header">
+          <span>Email address</span>
+          <span class="error" id="email-error"></span>
+        </div>
+
         <form class="mail" id="form">
-          <header class="form-header">
-            <span>Email address</span>
-            <span class="span-required"><b>Valid email required</b></span>
-          </header>
           <input type="email" id="mail" name="Email" placeholder="email@company.com" class="input required"
             oninput="emailValidate()" />
           <button class="btn" type="submit">Subscribe to monthly newsletter</button>
         </form>
       </section>
-      <section class="illustration">
-        <picture class="img1">
-          <source media="(max-width: 790px)" srcset="./src/images/illustration-sign-up-mobile.svg">
-          <source media="(min-width: 1440px)" srcset="./src/images/illustration-sign-up-desktop.svg">
-          <img class="image" src="./src/images/illustration-sign-up-desktop.svg"
-            alt="Chris standing up holding his daughter Elva" />
-        </picture>
-      </section>
+
+      <div class="illustration">
+      </div>
     </div>
 
   </main>
@@ -71,7 +66,7 @@
   <!-- Success message start 
   -->
 
-  <main id="open-modal" class="modal-window">
+  <section id="open-modal" class="modal-window">
     <div class="wrapper">
       <div class="success">
         <img src="./src/images/icon-success.svg" alt="success">
@@ -81,10 +76,10 @@
       </div>
       <button onclick="location.href='#';">Dismiss message</button>
     </div>
-  </main>
+  </section>
   <!-- Success message end -->
 
-  <footer class="attribution">
+  <footer class="offscreen">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Weslei573</a>.
   </footer>
