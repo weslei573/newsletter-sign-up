@@ -81,8 +81,21 @@ body {
     font-weight: 700;
 }
 
-.active {
+.error{
+    display: none;
     color: var(--Red);
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.active {
+    display: block;
+}
+
+.invalid {
+    color: var(--Red);
+    border-color: var(--Red);
+    background-color:hsla(4, 100%, 67%, 0.2);
 }
 
 .mail {

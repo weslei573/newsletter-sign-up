@@ -43,14 +43,13 @@
           </div>
         </div>
 
+        
         <div class="form-header">
           <span>Email address</span>
-          <span class="error" id="email-error"></span>
+          <span class="error">Valid email required</span>
         </div>
-
         <form class="mail" id="form">
-          <input type="email" id="mail" name="Email" placeholder="email@company.com" class="input required"
-            oninput="emailValidate()" />
+          <input type="email" id="email" name="Email" placeholder="email@company.com" class="input required" autocomplete="off" />
           <button class="btn" type="submit">Subscribe to monthly newsletter</button>
         </form>
       </section>
