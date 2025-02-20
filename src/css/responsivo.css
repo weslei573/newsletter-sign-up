@@ -1,49 +1,53 @@
+@media screen and (max-width:830px) {
+    body {
+        max-width: 100vw;
+    }
 
-@media screen and (max-width:790px) {
-    .box{
-        width: 100%;
+    .container {
+        height: 100%;
+    }
+
+    .box {
         height: 100%;
         border-radius: 0;
         flex-direction: column-reverse;
         padding: 0;
-        margin: 0;
+        gap: 0px;
     }
 
-    .subscribe{
-        max-width: 100%;
-        align-items: baseline;
+    .subscribe {
+        /*     background-color: aquamarine; */
+        padding: 40px 23px;
     }
 
-    .subscribe h1{
-        padding: 0px 0px 0px 10px;
+    
+    .subscribe h1 {
+        font-size: 2.5rem;
     }
 
-    .descri{
-        gap: 10px;
+    .illustration {
         width: 100%;
+        height: 284px;
+        background: url('/src/images/illustration-sign-up-mobile.svg') no-repeat top;
     }
 
-    .illustration{
-        width: auto;
-        height: auto;
+    .modal-window {
+        background-color: var(--White);
+        width: 100%;
+        height: 100vh;
+        padding: 0 64px;
+        border-radius: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 40px;
+        display: none;
     }
 
-    .illustration .img1{
-        width: auto;
-        height: auto;
-    }
-
-    .illustration .img1 .image{
-        padding: 0px;
-    }
-
-    .modal-window{
-        background-color: hsl(0, 0%, 100%);
-    }
-
-    .wrapper{
-        margin-top: 50px;
-        height: 100%;
-        justify-content: space-between;
-    }
+    
+.modal__info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+}
 }

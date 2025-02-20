@@ -43,13 +43,14 @@
           </div>
         </div>
 
-        
+
         <div class="form-header">
           <span>Email address</span>
-          <span class="error">Valid email required</span>
+          <span class="error"  id="email-error">Valid email required</span>
         </div>
-        <form class="mail" id="form">
-          <input type="email" id="email" name="Email" placeholder="email@company.com" class="input required" autocomplete="off" />
+        <form class="mail" id="form" novalidade>
+          <input type="email" id="email" name="email" placeholder="email@company.com"
+            autocomplete="off" />
           <button class="btn" type="submit">Subscribe to monthly newsletter</button>
         </form>
       </section>
@@ -58,25 +59,26 @@
       </div>
     </div>
 
-  </main>
 
 
-  <!-- Sign-up form end -->
-  <!-- Success message start 
-  -->
+    <!-- Sign-up form end -->
+    <!-- Success message start 
+    -->
 
-  <section id="open-modal" class="modal-window">
-    <div class="wrapper">
-      <div class="success">
+    <section class="modal-window">
         <img src="./src/images/icon-success.svg" alt="success">
-        <h1>Thanks for subscribing!</h1>
-        <p>A confirmation email has been sent to <b>ash@loremcompany.com</b>. Please open it and click the button inside
-          to confirm your subscription.</p>
-      </div>
-      <button onclick="location.href='#';">Dismiss message</button>
-    </div>
-  </section>
-  <!-- Success message end -->
+        <div class="modal__info">
+          <h1>Thanks for subscribing!</h1>
+          <p>
+            A confirmation email has been sent to <b>ash@loremcompany.com</b>. Please open it and click the button
+            inside
+            to confirm your subscription.
+          </p>
+        </div>
+        <button class="modal-window-btn">Dismiss message</button>
+    </section>
+    <!-- Success message end -->
+  </main>
 
   <footer class="offscreen">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

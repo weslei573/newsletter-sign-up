@@ -9,11 +9,6 @@
     --White: hsl(0, 0%, 100%);
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 body {
     background-color: var(--Blue-700);
     margin: 0 auto;
@@ -81,21 +76,26 @@ body {
     font-weight: 700;
 }
 
-.error{
+.error {
     display: none;
     color: var(--Red);
     font-size: .9rem;
     font-weight: 700;
 }
 
-.active {
+.active,
+.error.show {
     display: block;
+}
+
+.disable {
+    display: none;
 }
 
 .invalid {
     color: var(--Red);
     border-color: var(--Red);
-    background-color:hsla(4, 100%, 67%, 0.2);
+    background-color: hsla(4, 100%, 67%, 0.2);
 }
 
 .mail {
@@ -104,7 +104,7 @@ body {
     gap: 24px;
 }
 
-input{
+input {
     padding: 19px 23px;
     border: none;
     border: 1px solid var(--Grey);
@@ -125,7 +125,7 @@ input{
 }
 
 .btn:hover {
-    background: linear-gradient(90deg, hsl(346, 100%, 66%) 0%,  hsl(4, 100%, 67%) 100%);
+    background: linear-gradient(90deg, hsl(346, 100%, 66%) 0%, hsl(4, 100%, 67%) 100%);
     box-shadow: hsla(4, 100%, 67%) 0px 13px 27px -5px;
 }
 
@@ -137,3 +137,46 @@ input{
     background-size: contain;
 }
 
+.modal-window {
+    background-color: var(--White);
+    max-width: 507px;
+    height: 522px;
+    padding: 0 64px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 40px;
+    display: none;
+}
+
+.modal__info{
+    display: block;
+}
+
+.modal__info h1 {
+    font-size: 3.5rem;
+    margin-bottom: 24px;
+}
+
+.modal-window p {
+    line-height: 1.5;
+}
+
+.modal-window-btn {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 19px 23px;
+    background-color: var(--Blue-800);
+    color: var(--White);
+    cursor: pointer;
+}
+
+.modal-window-btn:hover {
+    background: linear-gradient(90deg, hsl(346, 100%, 66%) 0%, hsl(4, 100%, 67%) 100%);
+    box-shadow: hsla(4, 100%, 67%) 0px 13px 27px -5px;
+}
